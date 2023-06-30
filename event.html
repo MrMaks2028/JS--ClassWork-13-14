@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Объект event</title>
+</head>
+<body onclick="myClick(event)">
+    <div>This is DIV</div>
+    <p id="output"></p>
+
+    <script>
+        function myClick(e) {
+            console.log(e);
+            output.innerText += `Вы нажали на ${e.target.nodeName}\n`;
+        }
+    </script>
+</body>
+</html>

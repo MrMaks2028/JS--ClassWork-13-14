@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events / События</title>
+    <style>
+        .clickableDiv{
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="clickableDiv" onclick="say('Вау!')">Нажми на меня!</div>
+
+    <div id="eventBlock">А теперь нажми сюда!</div>
+
+    <script>
+
+        eventBlock.addEventListener('click', () => {
+            console.log('Событие было обработано с помощью слушателя событий')
+        });
+
+       /* eventBlock.onclick = () => { 
+            for(let i = 0; i < 5; i++)
+                console.log(i);
+        };*/
+
+
+        function say(msg){
+            console.log(`Блок сказал: "${msg}"`);
+        }
+    </script>
+</body>
+</html>
